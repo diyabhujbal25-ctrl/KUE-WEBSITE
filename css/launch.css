@@ -1,0 +1,1288 @@
+/* ActiCompress launch feature: new launch, high contrast and demo-first CTA. */
+.acti-launch {
+  position: relative;
+  isolation: isolate;
+  width: min(calc(100% - 64px), var(--max));
+  min-height: 510px;
+  margin: 34px auto 0;
+  display: grid;
+  grid-template-columns: 1.04fr 0.96fr;
+  overflow: hidden;
+  border-radius: 18px;
+  background:
+    radial-gradient(ellipse at 76% 15%, #00696d 0, transparent 42%),
+    linear-gradient(130deg, #141d23, #003538 60%, #141d23);
+  color: #fff;
+  box-shadow: 0 24px 70px #0d243033;
+}
+.acti-launch:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-image:
+    linear-gradient(#ffffff08 1px, transparent 1px),
+    linear-gradient(90deg, #ffffff08 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: linear-gradient(110deg, transparent, #000 65%);
+}
+.acti-launch-media {
+  position: relative;
+  min-height: 510px;
+  overflow: hidden;
+  background: #293238;
+}
+.acti-launch-media:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, transparent 55%, #141d23 100%),
+    linear-gradient(0deg, #141d2388, transparent 55%);
+  pointer-events: none;
+}
+.acti-launch-media > img {
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 62% center;
+  transition: transform 0.8s;
+}
+.acti-launch:hover .acti-launch-media > img {
+  transform: scale(1.035);
+}
+.acti-launch-stamp {
+  position: absolute;
+  z-index: 2;
+  top: 24px;
+  left: 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 13px;
+  border: 1px solid #ffffff65;
+  border-radius: 99px;
+  background: #141d23bd;
+  color: #e9f2fa;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+.acti-launch-stamp .ui-icon {
+  width: 14px;
+  height: 14px;
+  color: #84d4d8;
+}
+.acti-spec {
+  position: absolute;
+  z-index: 2;
+  left: 24px;
+  bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 16px;
+  border: 1px solid #ffffff4d;
+  border-radius: 11px;
+  background: #141d23d9;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 12px 32px #0003;
+}
+.acti-spec-icon {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  background: #c7f2e91a;
+  color: #84d4d8;
+}
+.acti-spec-icon .ui-icon {
+  width: 20px;
+  height: 20px;
+}
+.acti-spec strong,
+.acti-spec small {
+  display: block;
+}
+.acti-spec strong {
+  font-size: 12px;
+  letter-spacing: 0.03em;
+}
+.acti-spec small {
+  margin-top: 3px;
+  color: #bec9c9;
+  font-size: 10px;
+}
+.acti-launch-copy {
+  position: relative;
+  z-index: 1;
+  align-self: center;
+  padding: 58px clamp(26px, 5vw, 68px) 58px 28px;
+}
+.acti-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #84d4d8;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.acti-pulse {
+  position: relative;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #84d4d8;
+  box-shadow: 0 0 0 5px #84d4d81a;
+}
+.acti-launch-copy h2 {
+  max-width: 440px;
+  margin: 22px 0 17px;
+  color: #fff;
+  font-size: clamp(42px, 5.2vw, 70px);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+.acti-launch-copy h2 span {
+  color: #84d4d8;
+}
+.acti-launch-copy > p {
+  max-width: 480px;
+  margin: 0;
+  color: #bec9c9;
+  font-size: 15px;
+  line-height: 1.75;
+}
+.acti-launch-points {
+  display: grid;
+  gap: 12px;
+  margin: 25px 0 28px;
+}
+.acti-launch-points > span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #e9f2fa;
+  font-size: 12px;
+}
+.acti-launch-points .ui-icon {
+  width: 17px;
+  height: 17px;
+  color: #84d4d8;
+}
+.acti-launch-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 21px;
+}
+.acti-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 48px;
+  padding: 0 20px;
+  border: 1px solid #52a3a7;
+  background: linear-gradient(130deg, #00696d, #52a3a7);
+  color: #fff;
+  box-shadow: 0 10px 28px #05938a45;
+  cursor: pointer;
+}
+.acti-primary:hover {
+  background: linear-gradient(130deg, #004f52, #00696d);
+  transform: translateY(-1px);
+}
+.acti-primary .ui-icon {
+  width: 17px;
+  height: 17px;
+}
+.acti-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #e9f2fa;
+  font-size: 11px;
+  font-weight: 700;
+}
+.acti-text-link .ui-icon {
+  width: 15px;
+  height: 15px;
+}
+.shop-grid .acti-listing {
+  grid-column: 1/-1;
+}
+.acti-listing {
+  display: grid;
+  grid-template-columns: minmax(250px, 0.92fr) 1.08fr;
+  min-height: 270px;
+  overflow: hidden;
+  border: 1px solid #bec9c9;
+  border-radius: 12px;
+  background: linear-gradient(110deg, #141d23, #003538);
+  color: #fff;
+  box-shadow: 0 15px 38px #10252b16;
+}
+.acti-listing-image {
+  position: relative;
+  min-height: 270px;
+  overflow: hidden;
+  background: #293238;
+}
+.acti-listing-image:after {
+  content: "";
+  position: absolute;
+  inset: 50% 0 0;
+  background: linear-gradient(0deg, #141d23a8, transparent);
+}
+.acti-listing-image img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  object-position: center 48%;
+}
+.acti-listing-badge {
+  position: absolute;
+  z-index: 1;
+  top: 15px;
+  left: 15px;
+  padding: 7px 10px;
+  border-radius: 99px;
+  background: #84d4d8;
+  color: #003538;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 0.13em;
+}
+.acti-listing-info {
+  align-self: center;
+  padding: 30px clamp(24px, 4vw, 52px);
+}
+.acti-listing-info .eyebrow {
+  color: #84d4d8;
+}
+.acti-listing-info h3 {
+  margin: 12px 0 9px;
+  color: #fff;
+  font-size: clamp(30px, 4vw, 46px);
+  letter-spacing: -0.04em;
+}
+.acti-listing-info p {
+  max-width: 540px;
+  margin: 0 0 21px;
+  color: #bec9c9;
+  font-size: 13px;
+  line-height: 1.65;
+}
+.acti-backdrop {
+  z-index: 69;
+}
+.acti-modal {
+  z-index: 70;
+  max-height: min(92vh, 850px);
+  overflow: auto;
+  padding: 30px;
+  width: min(620px, calc(100% - 24px));
+  border: 1px solid #dbe8e9;
+}
+.acti-modal.open {
+  transform: translate(-50%, -50%);
+}
+.acti-modal .acti-eyebrow {
+  font-size: 9px;
+}
+.acti-modal h2 {
+  margin: 12px 42px 7px 0;
+  font-size: 30px;
+  letter-spacing: -0.03em;
+}
+.acti-modal-intro {
+  margin: 0 0 20px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+.acti-modal-close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+.acti-modal-close .ui-icon {
+  width: 18px;
+  height: 18px;
+}
+.acti-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 13px 12px;
+}
+.acti-form-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0;
+  color: #314149;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+.acti-form-grid input,
+.acti-form-grid select,
+.acti-form-grid textarea {
+  width: 100%;
+  min-height: 42px;
+  padding: 10px 11px;
+  border: 1px solid #d6e1e5;
+  border-radius: 6px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  font-size: 12px;
+  letter-spacing: normal;
+}
+.acti-form-grid textarea {
+  resize: vertical;
+  min-height: 74px;
+}
+.acti-config-field,
+.acti-message-field {
+  grid-column: 1/-1;
+}
+.acti-submit {
+  width: 100%;
+  margin-top: 16px;
+}
+.acti-form-message {
+  display: none;
+  margin-top: 12px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  background: #e8f6f1;
+  color: #17665d;
+  font-size: 11px;
+  line-height: 1.5;
+}
+.acti-form-message:not(:empty) {
+  display: block;
+}
+.acti-form-message a,
+.acti-contact-note a {
+  color: #006f73;
+  font-weight: 800;
+  text-decoration: underline;
+}
+.acti-contact-note {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 10px;
+}
+@media (max-width: 900px) {
+  .acti-launch {
+    grid-template-columns: 1fr 1fr;
+    min-height: 450px;
+  }
+  .acti-launch-media {
+    min-height: 450px;
+  }
+  .acti-launch-copy {
+    padding: 40px 28px;
+  }
+  .acti-launch-copy h2 {
+    font-size: clamp(38px, 5.5vw, 58px);
+  }
+}
+@media (max-width: 700px) {
+  .acti-launch {
+    width: calc(100% - 32px);
+    margin-top: 20px;
+    grid-template-columns: 1fr;
+  }
+  .acti-launch-media {
+    min-height: 330px;
+    grid-row: 1;
+  }
+  .acti-launch-media > img {
+    object-position: 65% center;
+  }
+  .acti-launch-copy {
+    padding: 27px 22px 30px;
+  }
+  .acti-launch-copy h2 {
+    font-size: clamp(42px, 12vw, 58px);
+    margin: 17px 0 12px;
+  }
+  .acti-launch-copy > p {
+    font-size: 13px;
+  }
+  .acti-launch-points {
+    margin: 20px 0 23px;
+  }
+  .acti-spec {
+    left: 14px;
+    bottom: 14px;
+  }
+  .acti-launch-stamp {
+    left: 14px;
+    top: 14px;
+  }
+  .acti-listing {
+    grid-template-columns: 1fr;
+  }
+  .acti-listing-image {
+    min-height: 235px;
+  }
+  .acti-listing-info {
+    padding: 24px;
+  }
+  .acti-modal {
+    padding: 25px 20px;
+  }
+  .acti-form-grid {
+    grid-template-columns: 1fr;
+  }
+  .acti-config-field,
+  .acti-message-field {
+    grid-column: auto;
+  }
+}
+
+/* PAGE-SPECIFIC LAUNCH DESIGNS: sizes and spacing are editable below. */
+.launch-strip {
+  width: min(calc(100% - 64px), var(--max));
+  margin: 24px auto 0;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  position: relative;
+  overflow: hidden;
+}
+.launch-strip h2,
+.launch-strip p {
+  margin: 0;
+}
+.launch-message {
+  flex: 1;
+  min-width: 0;
+}
+.launch-kicker {
+  display: block;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  line-height: 1.5;
+}
+.launch-strip h2 {
+  font-size: clamp(21px, 2.5vw, 34px);
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+  margin: 5px 0;
+}
+.launch-strip p {
+  font-size: 12px;
+  line-height: 1.6;
+}
+.launch-action {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 18px;
+  border: 0;
+  border-radius: 4px;
+  background: #00696d;
+  color: #fff;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.launch-action:hover {
+  background: #004f52;
+}
+.launch-action:focus-visible {
+  outline: 3px solid #52a3a7;
+  outline-offset: 4px;
+}
+.launch-action .ui-icon {
+  width: 18px;
+  height: 18px;
+}
+/* SPORTS: a compact equipment-drop strip; the Sports hero stays dominant. */
+.launch-sports {
+  min-height: 114px;
+  padding: 0 25px;
+  background: #003538;
+  color: #e9f2fa;
+  border: 1px solid #00696d;
+  border-left: 4px solid #84d4d8;
+  border-radius: 0;
+  gap: 22px;
+}
+.launch-number {
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: 0.12em;
+  color: #84d4d8;
+}
+.launch-number span {
+  display: block;
+  font-size: 24px;
+  margin-top: 5px;
+}
+.launch-cut {
+  align-self: stretch;
+  width: 108px;
+  object-fit: cover;
+  object-position: center;
+}
+.launch-sports .launch-kicker {
+  color: #84d4d8;
+  font-size: 9px;
+}
+.launch-sports h2 {
+  font-size: clamp(21px, 2.4vw, 31px);
+  font-style: italic;
+}
+.launch-sports p {
+  color: #bec9c9;
+}
+.launch-sports .launch-action {
+  background: #84d4d8;
+  color: #002021;
+}
+.sports-theme #launchHero {
+  padding-bottom: 22px;
+}
+/* WELLNESS: soft editorial introduction, with an arched portrait. */
+.launch-wellness {
+  min-height: 205px;
+  background: #e6eff7;
+  color: #003538;
+  padding: 26px 34px;
+  border-radius: 24px 24px 6px 6px;
+  gap: 34px;
+}
+.launch-wellness .launch-kicker {
+  color: #00696d;
+  font-size: 9px;
+}
+.launch-wellness h2 {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: clamp(26px, 3vw, 38px);
+  line-height: 1.15;
+  margin-top: 10px;
+}
+.launch-wellness-detail {
+  flex: 0 1 270px;
+}
+.launch-product-name {
+  font-weight: 800;
+  font-size: 15px;
+}
+.launch-wellness-detail p {
+  color: #3e4949;
+  margin: 7px 0 12px;
+}
+.launch-wellness .launch-action {
+  padding: 0 0 5px;
+  background: transparent;
+  color: #00696d;
+  border-bottom: 1px solid #52a3a7;
+  border-radius: 0;
+}
+.launch-portrait {
+  width: 160px;
+  height: 164px;
+  position: relative;
+  flex-shrink: 0;
+  border-radius: 90px 90px 8px 8px;
+  overflow: hidden;
+}
+.launch-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.launch-portrait span {
+  position: absolute;
+  bottom: 12px;
+  left: 15px;
+  right: 15px;
+  background: #ffffffed;
+  color: #003538;
+  padding: 6px;
+  text-align: center;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+.wellness-theme #launchHero {
+  padding-bottom: 24px;
+}
+/* SHOP: an arrival card above the shopping controls. */
+.launch-shop {
+  min-height: 144px;
+  padding: 22px 28px;
+  border-radius: 12px;
+  background: #293238;
+  color: #e9f2fa;
+  gap: 25px;
+}
+.launch-shop-label {
+  color: #84d4d8;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  line-height: 1.1;
+  padding-right: 25px;
+  border-right: 1px solid #6e7979;
+}
+.launch-shop-label .ui-icon {
+  display: block;
+  margin-top: 10px;
+  width: 18px;
+}
+.launch-shop h2 {
+  font-size: clamp(22px, 2.4vw, 30px);
+}
+.launch-shop .launch-kicker {
+  color: #84d4d8;
+  font-size: 9px;
+}
+.launch-shop p {
+  color: #bec9c9;
+}
+.launch-shop-image {
+  width: 92px;
+  height: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+/* PRODUCT: a quiet announcement, leaving room for the selected product. */
+.launch-product {
+  min-height: 74px;
+  padding: 16px 24px;
+  border-radius: 6px;
+  border: 1px solid #bec9c9;
+  background: #ebf5fd;
+  color: #003538;
+  gap: 24px;
+}
+.launch-product > .launch-kicker {
+  font-size: 9px;
+  color: #00696d;
+  border-right: 1px solid #bec9c9;
+  padding-right: 24px;
+}
+.launch-product .launch-message {
+  display: flex;
+  gap: 16px;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+.launch-product h2 {
+  font-size: 19px;
+  margin: 0;
+}
+.launch-product p {
+  font-size: 11px;
+  color: #3e4949;
+}
+.launch-product .launch-action {
+  padding: 9px 14px;
+}
+.product-theme #launchHero {
+  padding-bottom: 12px;
+}
+@media (max-width: 900px) {
+  .launch-strip {
+    gap: 18px;
+  }
+  .launch-sports {
+    padding: 16px 20px;
+  }
+  .launch-cut {
+    display: none;
+  }
+  .launch-wellness {
+    padding: 24px;
+  }
+  .launch-portrait {
+    width: 120px;
+    height: 150px;
+  }
+  .launch-shop-image {
+    display: none;
+  }
+  .launch-product .launch-message {
+    display: block;
+  }
+}
+@media (max-width: 600px) {
+  .launch-strip {
+    width: calc(100% - 32px);
+    margin-top: 16px;
+  }
+  .launch-sports {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    padding: 16px;
+    min-height: 0;
+  }
+  .launch-number {
+    display: none;
+  }
+  .launch-sports h2 {
+    font-size: 23px;
+  }
+  .launch-sports p {
+    display: none;
+  }
+  .launch-sports .launch-action {
+    font-size: 10px;
+    padding: 10px;
+    gap: 5px;
+  }
+  .launch-sports .launch-kicker {
+    font-size: 8px;
+    letter-spacing: 0.08em;
+  }
+  .launch-wellness {
+    display: grid;
+    grid-template-columns: 1fr 85px;
+    padding: 20px;
+    gap: 14px;
+  }
+  .launch-wellness h2 {
+    font-size: 27px;
+  }
+  .launch-wellness-detail {
+    grid-row: 2;
+    grid-column: 1 / -1;
+  }
+  .launch-wellness-detail p {
+    margin: 4px 0 8px;
+  }
+  .launch-portrait {
+    width: 85px;
+    height: 110px;
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .launch-portrait span {
+    left: 5px;
+    right: 5px;
+    font-size: 6px;
+    padding: 5px 2px;
+  }
+  .launch-shop {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 12px;
+  }
+  .launch-shop-label {
+    display: none;
+  }
+  .launch-shop .launch-action {
+    justify-self: start;
+  }
+  .launch-product {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8px;
+    padding: 14px;
+  }
+  .launch-product > .launch-kicker {
+    border: 0;
+    padding: 0;
+    grid-column: 1 / -1;
+  }
+  .launch-product h2 {
+    font-size: 17px;
+  }
+  .launch-product p {
+    display: none;
+  }
+  .launch-product .launch-action {
+    font-size: 10px;
+  }
+}
+
+
+/* =====================================
+   FULL-IMAGE ACTICOMPRESS BANNERS
+   ===================================== */
+
+#acticompress.launch-sports,
+#acticompress.launch-wellness {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  min-height: 440px;
+  padding: 48px;
+  gap: 18px;
+  overflow: hidden;
+
+  border: 0;
+  border-radius: 20px;
+}
+
+/* Remove previous decorative effects */
+#acticompress::before {
+  content: none;
+}
+
+/* Images fill the entire banner */
+#acticompress.launch-sports > .launch-cut,
+#acticompress.launch-sports > .sports-launch-visual,
+#acticompress.launch-wellness > .launch-portrait {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  margin: 0;
+
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+#acticompress.launch-sports > .launch-cut,
+#acticompress .sports-launch-visual > img,
+#acticompress .launch-portrait > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  /* Change this to adjust the image crop */
+  object-position: 65% center;
+}
+
+/* Remove small image captions and old badges */
+#acticompress .launch-number,
+#acticompress .launch-portrait > span,
+#acticompress .sports-launch-caption,
+#acticompress .sports-launch-visual::after {
+  display: none;
+}
+
+/* Gradient between image and text */
+#acticompress::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  width: auto;
+  height: auto;
+  border: 0;
+  border-radius: 0;
+  pointer-events: none;
+}
+
+/* Sports: dark overlay fades towards the product */
+#acticompress.launch-sports {
+  background: #003538;
+  color: #ffffff;
+}
+
+#acticompress.launch-sports::after {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 32, 33, 0.94) 0%,
+    rgba(0, 32, 33, 0.78) 32%,
+    rgba(0, 32, 33, 0.22) 62%,
+    transparent 100%
+  );
+}
+
+/* Wellness: light overlay fades towards the product */
+#acticompress.launch-wellness {
+  background: #ebf5fd;
+  color: #003538;
+}
+
+#acticompress.launch-wellness::after {
+  background: linear-gradient(
+    90deg,
+    rgba(245, 250, 255, 0.97) 0%,
+    rgba(245, 250, 255, 0.88) 32%,
+    rgba(245, 250, 255, 0.3) 65%,
+    transparent 100%
+  );
+}
+
+/* Text sits directly over the image */
+#acticompress .launch-message,
+#acticompress .sports-launch-content,
+#acticompress .launch-wellness-detail {
+  position: relative;
+  flex: none;
+  width: min(48%, 550px);
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+#acticompress h2 {
+  margin: 14px 0;
+  font-family: inherit;
+  font-size: clamp(30px, 3.4vw, 48px);
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+#acticompress.launch-sports h2 {
+  color: #ffffff;
+}
+
+#acticompress.launch-wellness h2 {
+  color: #003538;
+}
+
+#acticompress p {
+  display: block;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+#acticompress.launch-sports p {
+  color: #e9f2fa;
+}
+
+#acticompress.launch-wellness p {
+  color: #3e4949;
+}
+
+#acticompress .launch-action {
+  position: relative;
+  align-self: flex-start;
+  margin-top: 8px;
+  padding: 14px 20px;
+  border-radius: 8px;
+}
+
+#acticompress.launch-sports .launch-action {
+  background: #a0f0f4;
+  color: #003538;
+}
+
+#acticompress.launch-wellness .launch-action {
+  background: #00696d;
+  color: #ffffff;
+}
+
+/* Tablet */
+@media (min-width: 701px) and (max-width: 1000px) {
+  #acticompress.launch-sports,
+  #acticompress.launch-wellness {
+    padding: 34px;
+  }
+
+  #acticompress .launch-message,
+  #acticompress .sports-launch-content,
+  #acticompress .launch-wellness-detail {
+    width: 58%;
+  }
+}
+
+/* Mobile: image above, overlaid text towards the bottom */
+@media (max-width: 700px) {
+  #acticompress.launch-sports,
+  #acticompress.launch-wellness {
+    min-height: 560px;
+    padding: 28px 22px;
+    justify-content: flex-end;
+    gap: 12px;
+  }
+
+  #acticompress .launch-message,
+  #acticompress .sports-launch-content,
+  #acticompress .launch-wellness-detail {
+    width: 100%;
+    max-width: none;
+  }
+
+  #acticompress h2 {
+    font-size: 32px;
+  }
+
+  #acticompress.launch-sports::after {
+    background: linear-gradient(
+      to top,
+      rgba(0, 32, 33, 0.98) 0%,
+      rgba(0, 32, 33, 0.85) 35%,
+      rgba(0, 32, 33, 0.08) 75%
+    );
+  }
+
+  #acticompress.launch-wellness::after {
+    background: linear-gradient(
+      to top,
+      rgba(245, 250, 255, 0.99) 0%,
+      rgba(245, 250, 255, 0.93) 40%,
+      rgba(245, 250, 255, 0.05) 85%
+    );
+  }
+
+  #acticompress.launch-sports > .launch-cut,
+  #acticompress .sports-launch-visual > img,
+  #acticompress .launch-portrait > img {
+    object-position: center top;
+  }
+}
+
+/* Full-width ActiCompress banners — Sports and Wellness */
+#launchHero {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+#acticompress.launch-sports,
+#acticompress.launch-wellness {
+  box-sizing: border-box;
+  width: 100vw;
+  max-width: none;
+  margin-inline: calc(50% - 50vw);
+  border-radius: 0;
+
+  /* Keep text comfortably aligned inside the full-width image */
+  padding-inline: max(32px, calc((100vw - 1200px) / 2));
+}
+
+/* Prevent horizontal scrolling from viewport-width banners */
+html,
+body {
+  overflow-x: clip;
+}
+
+@media (max-width: 700px) {
+  #acticompress.launch-sports,
+  #acticompress.launch-wellness {
+    padding-inline: 22px;
+  }
+}
+
+/* Show the entire product image without cropping */
+#acticompress.launch-sports > .launch-cut,
+#acticompress .sports-launch-visual > img,
+#acticompress .launch-portrait > img {
+  object-fit: contain;
+  object-position: right center;
+  transform: none;
+}
+
+/* Background fills any space around the image */
+#acticompress.launch-sports {
+  background: #002426;
+}
+
+#acticompress.launch-wellness {
+  background: #ebf5fd;
+}
+
+/* Mobile: image above, text below within the banner */
+@media (max-width: 700px) {
+  #acticompress.launch-sports,
+  #acticompress.launch-wellness {
+    min-height: 640px;
+    padding-top: 340px;
+    justify-content: flex-end;
+  }
+
+  #acticompress.launch-sports > .launch-cut,
+  #acticompress.launch-sports > .sports-launch-visual,
+  #acticompress.launch-wellness > .launch-portrait {
+    inset: 0 0 auto;
+    width: 100%;
+    height: 320px;
+    min-height: 0;
+  }
+
+  #acticompress.launch-sports > .launch-cut,
+  #acticompress .sports-launch-visual > img,
+  #acticompress .launch-portrait > img {
+    object-position: center;
+  }
+}
+
+/* Banner colours */
+#acticompress.launch-sports {
+  --banner-base: #002426;
+  background: var(--banner-base);
+}
+
+#acticompress.launch-wellness {
+  --banner-base: #f2f8fc;
+  background: var(--banner-base);
+}
+
+/* Keep both images fully visible and at full opacity */
+#acticompress.launch-sports > .launch-cut,
+#acticompress .sports-launch-visual,
+#acticompress .sports-launch-visual > img,
+#acticompress .launch-portrait,
+#acticompress .launch-portrait > img {
+  opacity: 1;
+}
+
+/* Remove any existing image filters */
+#acticompress.launch-sports > .launch-cut,
+#acticompress .sports-launch-visual > img,
+#acticompress .launch-portrait > img {
+  object-fit: contain;
+  filter: none;
+}
+
+/*
+  Blend the left edge of the image into the banner.
+  The overlay becomes completely transparent before the product.
+*/
+#acticompress.launch-sports::after,
+#acticompress.launch-wellness::after {
+  background: linear-gradient(
+    to right,
+    var(--banner-base) 0%,
+    var(--banner-base) 49%,
+    transparent 69%
+  );
+  opacity: 1;
+  pointer-events: none;
+}
+
+/* Slightly stronger definition for the Wellness image */
+#acticompress.launch-wellness .launch-portrait > img {
+  filter: contrast(1.08) saturate(1.06);
+}
+
+/* Mobile: blend the image's bottom edge into the text area */
+@media (max-width: 700px) {
+  #acticompress.launch-sports::after,
+  #acticompress.launch-wellness::after {
+    background: linear-gradient(
+      to bottom,
+      transparent 0px,
+      transparent 250px,
+      var(--banner-base) 320px,
+      var(--banner-base) 100%
+    );
+  }
+}
+/* BOTH BANNERS: remove the overlay covering the product */
+#acticompress.launch-sports::after,
+#acticompress.launch-wellness::after {
+  background: none;
+}
+
+/* Image area: right side of the banner */
+#acticompress.launch-sports > .launch-cut,
+#acticompress.launch-sports > .sports-launch-visual,
+#acticompress.launch-wellness > .launch-portrait {
+  position: absolute;
+  inset: 0 0 0 auto;
+  width: 52%;
+  height: 100%;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  overflow: hidden;
+  opacity: 1;
+
+  /* Blend only the left edge */
+  -webkit-mask-image: linear-gradient(
+    to right, transparent, #000 15%
+  );
+  mask-image: linear-gradient(
+    to right, transparent, #000 15%
+  );
+}
+
+/* Full image, centred without cropping */
+#acticompress.launch-sports > .launch-cut,
+#acticompress .sports-launch-visual > img,
+#acticompress .launch-portrait > img {
+  object-fit: contain;
+  object-position: center;
+  opacity: 1;
+  filter: none;
+  transform: none;
+}
+
+#acticompress .sports-launch-visual > img,
+#acticompress .launch-portrait > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Text stays clear of the image */
+#acticompress > .launch-message,
+#acticompress > .sports-launch-content,
+#acticompress > .launch-wellness-detail {
+  width: 46%;
+}
+
+/* Mobile: image above text on both pages */
+@media (max-width: 700px) {
+  #acticompress.launch-sports,
+  #acticompress.launch-wellness {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-height: 0;
+    padding: 0 22px 30px;
+    gap: 20px;
+  }
+
+  #acticompress.launch-sports > .launch-cut,
+  #acticompress.launch-sports > .sports-launch-visual,
+  #acticompress.launch-wellness > .launch-portrait {
+    position: relative;
+    inset: auto;
+    order: -1;
+    z-index: 0;
+    flex: none;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    margin: 0;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  #acticompress > .launch-message,
+  #acticompress > .sports-launch-content,
+  #acticompress > .launch-wellness-detail {
+    width: 100%;
+  }
+}

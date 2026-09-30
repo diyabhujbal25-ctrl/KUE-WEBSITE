@@ -1,0 +1,551 @@
+/* Shared navigation. Edit page colors in themes.css. */
+.landing-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 84px;
+}
+.parent-link {
+  font-weight: 800;
+  font-size: 19px;
+  letter-spacing: 0.09em;
+  color: #003538;
+}
+.parent-link span {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 0.02em;
+  font-weight: 400;
+  margin-top: 4px;
+}
+.landing-nav nav {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+.landing-nav nav a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  padding: 10px 0;
+}
+.landing-nav [aria-current] {
+  color: #00696d;
+  border-bottom: 2px solid #00696d;
+  font-weight: 800;
+}
+.landing-nav .ui-icon {
+  width: 15px;
+  height: 15px;
+}
+.landing-footer {
+  padding: 48px 0;
+  background: #141d23;
+  color: #e9f2fa;
+}
+.landing-footer .wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.landing-footer p {
+  font-size: 13px;
+  color: #bec9c9;
+  margin-top: 12px;
+}
+.landing-footer nav {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  font-size: 13px;
+}
+.product-image {
+  display: block;
+}
+.product-card .product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.product-card .product-sub {
+  min-height: 65px;
+}
+.product-card .button {
+  align-self: flex-start;
+}
+@media (max-width: 700px) {
+  .landing-nav {
+    flex-wrap: wrap;
+    padding-top: 15px;
+    padding-bottom: 12px;
+    gap: 14px;
+  }
+  .landing-nav nav {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .landing-nav > .button {
+    padding: 10px 12px;
+    font-size: 11px;
+  }
+  .parent-link {
+    font-size: 16px;
+  }
+  .landing-footer .wrap {
+    flex-direction: column;
+  }
+}
+
+/* Header branding — replace assets/kue-logo.png to change the logo. */
+.header-brand { display:flex; align-items:center; gap:18px; flex-shrink:0; }
+.kue-header-logo { display:inline-flex; align-items:center; }
+.kue-header-logo img { display:block; width:104px; height:48px; object-fit:contain; }
+.anatomech-back { font-size:11px; color:#3e4949; border-left:1px solid #bec9c9; padding-left:18px; }
+@media(max-width:900px) { .header-brand { gap:10px; } .anatomech-back { padding-left:10px; font-size:10px; } .landing-nav { gap:16px; } .landing-nav nav { gap:18px; } }
+@media(max-width:700px) { .kue-header-logo img { width:82px; height:40px; } .header-brand { flex-direction:column; align-items:flex-start; gap:3px; } .anatomech-back { padding-left:0; border:0; } }
+/* KUE footer branding */
+.footer-brand > a:first-child {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 16px;
+  background: #ffffff;
+  border-radius: 8px;
+}
+
+.footer-kue-logo {
+  display: block;
+  width: 110px;
+  height: auto;
+}
+
+.landing-footer .footer-brand p {
+  margin: 16px 0 8px;
+  color: #e9f2fa;
+  font-size: 14px;
+}
+
+.landing-footer .footer-parent {
+  display: inline-block;
+  color: #84d4d8;
+  font-size: 12px;
+}
+
+.landing-footer nav a:hover,
+.landing-footer .footer-parent:hover {
+  color: #a0f0f4;
+}
+
+.landing-footer a:focus-visible {
+  outline: 2px solid #84d4d8;
+  outline-offset: 5px;
+}
+
+
+/* ========================================
+   ACTICOMPRESS — REFINED LAUNCH SECTIONS
+   ======================================== */
+
+.launch-sports,
+.launch-wellness {
+  position: relative;
+  isolation: isolate;
+  font-family: inherit;
+}
+
+/* ---------- SPORTS ---------- */
+
+.launch-sports {
+  min-height: 150px;
+  padding: 24px 30px;
+  gap: 24px;
+  border: 1px solid #52a3a7;
+  border-left: 4px solid #84d4d8;
+  border-radius: 16px;
+
+  background:
+    radial-gradient(
+      ellipse at 85% 0%,
+      rgba(82, 163, 167, 0.3),
+      transparent 55%
+    ),
+    linear-gradient(115deg, #003538, #004f52);
+
+  box-shadow: 0 12px 28px rgba(0, 53, 56, 0.12);
+}
+
+/* Decorative rings behind the content */
+.launch-sports::before,
+.launch-sports::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  border: 1px solid rgba(132, 212, 216, 0.18);
+  border-radius: 50%;
+}
+
+.launch-sports::before {
+  width: 250px;
+  height: 250px;
+  right: 130px;
+  top: -145px;
+}
+
+.launch-sports::after {
+  width: 180px;
+  height: 180px;
+  right: 165px;
+  top: -110px;
+}
+
+.launch-sports .launch-number {
+  padding-right: 22px;
+  border-right: 1px solid rgba(132, 212, 216, 0.35);
+  color: #a0f0f4;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+}
+
+.launch-sports .launch-number span {
+  font-size: 30px;
+  line-height: 1;
+  margin-top: 8px;
+}
+
+/* Product image, when present in the HTML */
+.launch-sports .launch-cut {
+  width: 96px;
+  height: 108px;
+  align-self: center;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid rgba(132, 212, 216, 0.35);
+}
+
+.launch-sports .launch-kicker {
+  display: inline-flex;
+  padding: 5px 10px;
+  margin-bottom: 6px;
+  border: 1px solid rgba(132, 212, 216, 0.3);
+  border-radius: 30px;
+  background: rgba(132, 212, 216, 0.08);
+  color: #a0f0f4;
+  font-size: 9px;
+  letter-spacing: 0.13em;
+}
+
+.launch-sports h2 {
+  margin: 5px 0 8px;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: clamp(24px, 2.6vw, 36px);
+  font-weight: 800;
+  font-style: normal;
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+.launch-sports p {
+  color: #e9f2fa;
+  font-size: 13px;
+}
+
+.launch-sports .launch-action {
+  padding: 15px 20px;
+  border-radius: 9px;
+  background: #a0f0f4;
+  color: #003538;
+  box-shadow: 0 5px 18px rgba(0, 32, 33, 0.16);
+  transition:
+    transform 180ms ease,
+    background 180ms ease;
+}
+
+.launch-sports .launch-action:hover {
+  background: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* ---------- WELLNESS ---------- */
+
+.launch-wellness {
+  min-height: 220px;
+  padding: 30px 36px;
+  gap: 32px;
+  border: 1px solid #bec9c9;
+  border-radius: 24px;
+
+  background:
+    radial-gradient(
+      ellipse at 95% 20%,
+      rgba(132, 212, 216, 0.28),
+      transparent 55%
+    ),
+    linear-gradient(115deg, #ffffff, #ebf5fd);
+
+  box-shadow: 0 10px 28px rgba(0, 53, 56, 0.06);
+}
+
+.launch-wellness .launch-kicker {
+  display: inline-block;
+  max-width: 250px;
+  padding-left: 12px;
+  border-left: 3px solid #52a3a7;
+  color: #00696d;
+  font-size: 9px;
+  line-height: 1.7;
+  letter-spacing: 0.13em;
+}
+
+.launch-wellness h2 {
+  margin: 14px 0 0;
+  color: #003538;
+  font-family: inherit;
+  font-size: clamp(25px, 2.8vw, 37px);
+  font-weight: 600;
+  line-height: 1.14;
+  letter-spacing: -0.045em;
+}
+
+.launch-wellness-detail {
+  padding-left: 26px;
+  border-left: 1px solid #bec9c9;
+}
+
+.launch-wellness .launch-product-name {
+  color: #003538;
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+.launch-wellness-detail p {
+  margin: 10px 0 18px;
+  color: #3e4949;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.launch-wellness .launch-action {
+  padding: 11px 15px;
+  border: 1px solid #00696d;
+  border-radius: 8px;
+  background: #00696d;
+  color: #ffffff;
+  transition:
+    transform 180ms ease,
+    background 180ms ease;
+}
+
+.launch-wellness .launch-action:hover {
+  background: #004f52;
+  transform: translateY(-2px);
+}
+
+.launch-wellness .launch-portrait {
+  width: 160px;
+  height: 178px;
+  border: 5px solid #ffffff;
+  border-radius: 90px 90px 18px 18px;
+  box-shadow: 0 8px 22px rgba(0, 53, 56, 0.12);
+}
+
+.launch-wellness .launch-portrait img {
+  object-position: center;
+}
+
+.launch-wellness .launch-portrait span {
+  bottom: 10px;
+  left: 9px;
+  right: 9px;
+  padding: 7px 5px;
+  border-radius: 5px;
+  background: #ffffff;
+  color: #00696d;
+  font-size: 8px;
+  letter-spacing: 0.12em;
+}
+
+/* ---------- TABLET ---------- */
+
+@media (max-width: 900px) {
+  .launch-sports {
+    padding: 22px;
+    gap: 20px;
+  }
+
+  .launch-wellness {
+    padding: 26px;
+    gap: 22px;
+  }
+
+  .launch-wellness-detail {
+    padding-left: 20px;
+  }
+
+  .launch-wellness .launch-portrait {
+    width: 120px;
+    height: 155px;
+  }
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 600px) {
+  .launch-sports {
+    min-height: 0;
+    padding: 18px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+    border-radius: 12px;
+  }
+
+  .launch-sports .launch-kicker {
+    font-size: 8px;
+    padding: 4px 8px;
+  }
+
+  .launch-sports h2 {
+    font-size: 27px;
+  }
+
+  .launch-sports .launch-action {
+    justify-self: start;
+    padding: 11px 15px;
+    font-size: 12px;
+  }
+
+  .launch-wellness {
+    padding: 22px;
+    gap: 18px;
+    grid-template-columns: minmax(0, 1fr) 90px;
+    border-radius: 20px;
+  }
+
+  .launch-wellness h2 {
+    font-size: 26px;
+  }
+
+  .launch-wellness .launch-kicker {
+    font-size: 8px;
+    letter-spacing: 0.08em;
+  }
+
+  .launch-wellness-detail {
+    padding: 18px 0 0;
+    border-left: 0;
+    border-top: 1px solid #bec9c9;
+  }
+
+  .launch-wellness .launch-portrait {
+    width: 90px;
+    height: 125px;
+    border-width: 3px;
+  }
+
+  .launch-wellness .launch-portrait span {
+    left: 4px;
+    right: 4px;
+    font-size: 6px;
+    letter-spacing: 0.06em;
+  }
+
+  .launch-wellness .launch-action {
+    font-size: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .launch-sports .launch-action,
+  .launch-wellness .launch-action {
+    transition: none;
+    transform: none;
+  }
+}
+
+/* Bigger Sports launch image */
+.launch-sports .launch-cut {
+  display: block;
+  width: clamp(150px, 18vw, 210px);
+  height: 180px;
+  flex-shrink: 0;
+  align-self: center;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+/* Bigger Wellness launch image */
+.launch-wellness .launch-portrait {
+  width: clamp(180px, 21vw, 240px);
+  height: 250px;
+  flex-shrink: 0;
+  border-radius: 120px 120px 20px 20px;
+}
+
+.launch-wellness .launch-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Keep room for text on tablets */
+@media (min-width: 601px) and (max-width: 1000px) {
+  .launch-sports,
+  .launch-wellness {
+    flex-wrap: wrap;
+  }
+
+  .launch-sports .launch-number {
+    display: none;
+  }
+
+  .launch-sports .launch-message,
+  .launch-wellness .launch-message {
+    flex: 1 1 220px;
+  }
+}
+
+/* Mobile: larger images without squeezing the text */
+@media (max-width: 600px) {
+  .launch-sports,
+  .launch-wellness {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .launch-sports .launch-cut {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    height: 220px;
+  }
+
+  .launch-wellness .launch-portrait {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    height: 240px;
+    border-radius: 18px;
+  }
+
+  .launch-wellness .launch-message {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .launch-wellness .launch-wellness-detail {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .launch-wellness .launch-portrait span {
+    left: 18px;
+    right: auto;
+    padding: 8px 14px;
+    font-size: 9px;
+  }
+}

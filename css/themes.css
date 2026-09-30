@@ -1,0 +1,145 @@
+/* CHANGE PAGE COLORS HERE. All colors below come from DESIGN(1).md. */
+:root {
+  --brand-ink: #141d23;
+  --brand-charcoal: #293238;
+  --brand-deep-teal: #003538;
+  --brand-teal: #00696d;
+  --brand-turquoise: #52a3a7;
+  --brand-light-teal: #84d4d8;
+  --brand-soft: #ebf5fd;
+  --brand-white: #ffffff;
+}
+/* SPORTS: lighter backgrounds with a bold teal hero */
+body.sports-theme {
+  background: #e6eff7;
+}
+
+.sports-context {
+  --ink: #141d23;
+  --muted: #3e4949;
+  --line: #bec9c9;
+  --bg: #e6eff7;
+  --pale: #dae4ec;
+  --teal: #00696d;
+  --teal2: #52a3a7;
+
+  background: var(--bg);
+  color: var(--ink);
+}
+
+/* Main Sports hero */
+.sports-context > .hero {
+  --ink: #ffffff;
+  --muted: #e9f2fa;
+
+  background: #00696d;
+  color: #ffffff;
+}
+
+.sports-context .hero-copy h1 span {
+  color: #a0f0f4;
+}
+
+.sports-context .hero-copy .eyebrow {
+  background: #003538;
+  color: #a0f0f4;
+}
+
+/* Alternating sections */
+.sports-context .section.pale {
+  background: #dae4ec;
+}
+
+.sports-context .tag {
+  background: #e0e9f2;
+  color: #004f52;
+}
+
+/* Light cards */
+.sports-context .feature-card,
+.sports-context .product-card,
+.sports-context .zone,
+.sports-context .tech-panel {
+  background: #ffffff;
+  border-color: #bec9c9;
+}
+
+.sports-context .feature-card:hover,
+.sports-context .zone:hover {
+  background: #ebf5fd;
+}
+
+.sports-context .zone-illustration {
+  background: #e6eff7;
+}
+
+/* Buttons on light sections */
+.sports-context .button:not(.acti-primary) {
+  background: #00696d;
+  color: #ffffff;
+}
+
+.sports-context .button.ghost {
+  background: transparent;
+  color: #00696d;
+  border-color: #00696d;
+}
+
+/* Buttons inside the teal hero */
+.sports-context > .hero .button {
+  background: #ffffff;
+  color: #003538;
+}
+
+.sports-context > .hero .button.ghost {
+  background: transparent;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.sports-context .badge {
+  color: #00696d;
+}/* WELLNESS: soft blue-white surfaces and gentle teal accents. */
+.wellness-context {
+  background: #ffffff;
+  --pale: #ebf5fd;
+}
+.wellness-context > .hero,
+.wellness-context .section.pale {
+  background: #ebf5fd;
+}
+.wellness-context .hero-copy h1 span {
+  color: #00696d;
+}
+.wellness-context .tag,
+.wellness-context .zone-illustration {
+  background: #e6eff7;
+  color: #00696d;
+}
+.wellness-context .feature-card:hover,
+.wellness-context .zone:hover {
+  background: #f5faff;
+}
+/* Shared launch hero spacing and navigation sizing. */
+#launchHero {
+  padding-bottom: 34px;
+}
+#acticompress {
+  scroll-margin-top: 92px;
+}
+.head {
+  gap: 22px;
+}
+.nav {
+  gap: 17px;
+}
+@media (max-width: 1200px) and (min-width: 701px) {
+  .search-box {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  #launchHero {
+    padding-bottom: 20px;
+  }
+}
