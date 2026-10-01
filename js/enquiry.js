@@ -137,3 +137,4 @@ function bindEnquiry() {
     window.location.href = mailto;
   });
 }
+
