@@ -549,3 +549,78 @@
     font-size: 9px;
   }
 }
+
+/* Let the header contain all its content */
+#siteHeader .header {
+  height: auto;
+  min-height: 76px;
+}
+
+/* Mobile header — Sports and Wellness */
+@media (max-width: 700px) {
+  #siteHeader .header {
+    min-height: 0;
+  }
+
+  #siteHeader .landing-nav {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 12px;
+    min-height: 0;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  /* Logo and demo button stay on the first row */
+  #siteHeader .header-brand {
+    grid-column: 1;
+    grid-row: 1;
+    min-width: 0;
+  }
+
+  #siteHeader .landing-nav > .button {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+  }
+
+  /* Navigation gets its own full-width row */
+  #siteHeader .landing-nav > nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    position: static;
+    display: flex;
+    width: 100%;
+    gap: 12px;
+    margin: 0;
+  }
+
+  #siteHeader .landing-nav > nav > a {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 10px 12px;
+
+    background: #f2f8fc;
+    color: #003538;
+    border: 1px solid #c7dfe0;
+    border-radius: 6px;
+
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  #siteHeader .landing-nav > nav > a[aria-current="page"] {
+    background: #00696d;
+    color: #ffffff;
+    border-color: #00696d;
+  }
+
+  #siteHeader .landing-nav > nav > a:focus-visible {
+    outline: 2px solid #00696d;
+    outline-offset: 3px;
+  }
+}
