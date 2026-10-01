@@ -55,10 +55,10 @@ function enquiryModal() {
             Configuration of interest
             <select name="configuration">
               <option>Help me choose</option>
-              <option>4 actuators</option>
-              <option>6 actuators</option>
-              <option>8 actuators</option>
-              <option>12 actuators</option>
+              <option>Knee</option>
+              <option>Calf</option>
+              <option>Ankel</option>
+              <option>Full Leg</option>
             </select>
           </label>
           <label class="acti-config-field">
