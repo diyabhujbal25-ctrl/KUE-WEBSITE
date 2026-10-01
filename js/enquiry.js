@@ -57,7 +57,6 @@ function enquiryModal() {
               <option>Help me choose</option>
               <option>Knee</option>
               <option>Calf</option>
-              <option>Ankel</option>
               <option>Full Leg</option>
             </select>
           </label>
